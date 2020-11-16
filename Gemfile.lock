@@ -1,4 +1,5 @@
 GEM
+  remote: https://rubygems.org/
   specs:
     actioncable (6.0.3.4)
       actionpack (= 6.0.3.4)
@@ -252,8 +253,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-<<<<<<< HEAD
-=======
   autoprefixer-rails
   bootsnap (>= 1.4.2)
   byebug
@@ -282,7 +281,6 @@ DEPENDENCIES
 
 RUBY VERSION
    ruby 2.6.6p146
->>>>>>> master
 
 BUNDLED WITH
    2.1.4
