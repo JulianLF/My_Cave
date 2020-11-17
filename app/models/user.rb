@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   has_one_attached :photo
-  has_many :products, dependency: :destroy
-  has_many :transactions, dependency: :destroy
-  has_one :cart, dependency: :destroy
+  has_many :products, dependent: :destroy
+  has_many :transactions, dependent: :destroy
+  has_one :cart, dependent: :destroy
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
 
