@@ -2,9 +2,60 @@
   <div class="container">
     <h1>My cave</h1>
     <p>Your personal cave straight to your door, sell, buy, drink !</p>
-    <%= link_to "Register Now", new_user_registration_path, class: "btn btn-ghost" %>
+    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal">
+      Register Now
+    </button>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #3D0016; color: white">
+          <h5 class="modal-title" id="exampleModalLabel">Registration</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <%= simple_form_for(User.new, as: :user, url: registration_path(:user)) do |f| %>
+            <%= f.error_notification %>
+            <div class="form-inputs">
+              <%= f.input :email,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "email" }%>
+              <%= f.input :username,
+                          required: true,
+                          input_html: { autocomplete: "username" }%>
+              <%= f.input :first_name,
+                          required: true,
+                          input_html: { autocomplete: "first_name" }%>
+              <%= f.input :last_name,
+                          required: true,
+                          input_html: { autocomplete: "last_name" }%>
+              <%= f.input :password,
+                          required: true,
+                          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                          input_html: { autocomplete: "new-password" } %>
+              <%= f.input :password_confirmation,
+                          required: true,
+                          input_html: { autocomplete: "new-password" } %>
+            </div>
+        </div>
+
+            <div class="modal-footer" style="background-color: #3D0016; color: white">
+              <div class="form-actions">
+                <button type="button" class="btn btn-ghost-revert" data-dismiss="modal">Close</button>
+                <%= f.button :submit, "Sign up", class: "btn btn-ghost" %>
+              </div>
+            </div>
+          <% end %>
+      </div>
+    </div>
   </div>
 </div>
+
 <div class="container">
   <div class="cards">
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dykscnyvu/image/upload/v1605605654/radovan-rgJ1xwQsoJc-unsplash_fbu4hn.jpg)">
