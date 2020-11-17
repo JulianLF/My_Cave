@@ -2,15 +2,16 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :new, :destroy, :update]  
   
   def index
-   @product = policy_scope(Product).order(created_at: :desc)
+   @restaurants = policy_scope(Restaurant).order(created_at: :desc)
+
   end
   
   def show
   end
 
   def new
-    authorize @product
-    @product = Product.new
+   authorize @product
+   @product = Product.new
   end
 
   def create
@@ -27,6 +28,7 @@ class ProductsController < ApplicationController
   end
 
   def update
+    authorize @product 
     @product.update(product_params)
     redirect_to product_path(@product)
   end
