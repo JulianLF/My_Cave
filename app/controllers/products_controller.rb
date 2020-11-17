@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :new, :destroy, :update]  
+  before_action :set_product, only: [:show, :edit, :destroy, :update]  
   
   def index
     @products = policy_scope(Product).order(created_at: :desc)
@@ -15,9 +15,11 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    @product.user = current_user              # forcer user 1
+    @product.category = Category.first        # problem a resoudre
     authorize @product
     if @product.save
-      redirect_to product_path
+      redirect_to product_path(@product)
     else
       render :new
     end
