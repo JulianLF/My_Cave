@@ -27,16 +27,14 @@ class ProductsController < ApplicationController
   end
 
   def update
-
     @product.update(product_params)
+    authorize @product
     redirect_to product_path(@product)
-    else 
-     render :edit
-    end
   end
 
   def destroy
     @product.destroy
+    authorize @product
     redirect_to_product_path(@product)
   end
 
