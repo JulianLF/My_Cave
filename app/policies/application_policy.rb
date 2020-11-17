@@ -10,6 +10,10 @@ class ApplicationPolicy
     owner?
   end
 
+  def shop?
+    true
+  end
+
   def show?
     owner?
   end
