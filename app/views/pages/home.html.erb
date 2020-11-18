@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= asset_path 'banner.jpg' %>');">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('/assets/banner.jpg');">
   <div class="container">
     <h1 id="home-title">My cave</h1>
     <p>Your personal cave straight to your door, sell, buy, drink !</p>
@@ -12,24 +12,29 @@
     </form>
   </div>
 </div>
+
 <div class="container">
   <div class="cards">
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'biere.jpg' %>);">
       Beers
     </div>
+
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'wine.jpg' %>)">
       Wine
     </div>
+
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'champagne.jpg' %>)">
       Champagne
     </div>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'liquors.jpg' %>)">
+
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'liquors.jpg' %>)">
       Liquors
     </div>
     <a href="/products">
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'allproducts.jpg' %>)">
-        All Products
-      </div>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'allproducts.jpg' %>)">
+      All Products
+    </div>
     </a>
   </div>
 </div>
+
