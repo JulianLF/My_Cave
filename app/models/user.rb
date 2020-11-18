@@ -8,7 +8,8 @@ class User < ApplicationRecord
 
   validates :username, presence: true, uniqueness: true
   validates :password, presence: true
-  validates :email, presence: true, uniqueness: true, format: { with: /\A([a-z1-9]+)@([a-z1-9]+)\.([a-z]+)\z/, message: 'Email invalid' }
+  validates :email, presence: true, uniqueness: true, format: { with: /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/,
+                                                                message: 'Email invalid' }
   validates :first_name, presence: true
   validates :last_name, presence: true
 end
