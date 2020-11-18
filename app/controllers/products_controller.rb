@@ -34,7 +34,7 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-       redirect_to product_path(@product)
+      redirect_to product_path(@product)
     else
       render :edit
     end
@@ -48,7 +48,7 @@ class ProductsController < ApplicationController
   private
 
   def set_product
-    @product = policy__scope(Product).find(params[:id])
+    @product = policy_scope(Product).find(params[:id])
     authorize @product
   end
 
