@@ -15,8 +15,6 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-    @product.user = current_user              # forcer user 1
-    @product.category = Category.first        # problem a resoudre
     authorize @product
     if @product.save
       redirect_to product_path(@product)
@@ -29,14 +27,15 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @product.update(product_params)
-    authorize @product
-    redirect_to product_path(@product)
+    if @product.update(product_params)
+       redirect_to product_path(@product)
+    else
+      render :edit
+    end
   end
 
   def destroy
     @product.destroy
-    authorize @product
     redirect_to_product_path(@product)
   end
 
@@ -44,6 +43,7 @@ class ProductsController < ApplicationController
 
   def set_product
     @product = Product.find(params[:id])
+    authorize @product
   end
 
   def product_params
