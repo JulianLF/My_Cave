@@ -1,9 +1,6 @@
-<div class="container m-auto my-5 py-5 position-absolute">
-  <h1>test</h1>
-  <% @products.each do |product| %>
-    <div class="container">
-  <div class="row">
-    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+<div class="size-container">
+  <div class="cards">
+    <% @products.each do |product| %>
       <div class="card">
         <img class="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" alt="Vans">
         <div class="card-img-overlay d-flex justify-content-end">
@@ -12,33 +9,18 @@
           </a>
         </div>
         <div class="card-body">
-          <h4 class="card-title">Vans Sk8-Hi MTE Shoes</h4>
-          <h6 class="card-subtitle mb-2 text-muted">Style: VA33TXRJ5</h6>
+          <h4 class="card-title"><%= product.name %> </h4>
           <p class="card-text">
-            The Vans All-Weather MTE Collection features footwear and apparel designed to withstand the elements whilst still looking cool.             </p>
-          <div class="options d-flex flex-fill">
-             <select class="custom-select mr-1">
-                <option selected>Color</option>
-                <option value="1">Green</option>
-                <option value="2">Blue</option>
-                <option value="3">Red</option>
-            </select>
-            <select class="custom-select ml-1">
-                <option selected>Size</option>
-                <option value="1">41</option>
-                <option value="2">42</option>
-                <option value="3">43</option>
-            </select>
-          </div>
+            <%= product.description %></p>
           <div class="buy d-flex justify-content-between align-items-center">
-            <div class="price text-success"><h5 class="mt-4">$125</h5></div>
-             <a href="#" class="btn btn-danger mt-3"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+            <div class="price text-success"><h5 class="mt-4"><%= product.price %>€</h5></div>
+            <a href="#" class="btn btn-danger mt-3">Add to Cart</a>
           </div>
         </div>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
-  <% end %>
-</div>
+
+
 
