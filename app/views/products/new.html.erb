@@ -1,0 +1,11 @@
+<h1>TITRE</h1>
+
+<%= simple_form_for @product do |f|  %>
+<%= f.input :name %>
+<%= f.input :description, as: :text %>
+<%#= f.association :category %>
+<%= f.input :price, as: :integer %>
+<%= f.button :submit %>
+
+
+<% end %>
