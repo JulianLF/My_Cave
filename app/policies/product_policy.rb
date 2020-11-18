@@ -3,8 +3,9 @@ class ProductPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
-  end
-  def create?
-    true
+
+    def shop?
+      true
+    end
   end
 end
