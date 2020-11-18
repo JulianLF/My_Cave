@@ -7,35 +7,39 @@ class ApplicationPolicy
   end
 
   def index?
-    owner?
+    owner? || admin?
   end
 
   def show?
-    owner?
+    owner? || admin?
   end
 
   def create?
-    owner?
+    owner? || admin?
   end
 
   def new?
-    owner?
+    owner? || admin?
   end
 
   def update?
-    owner?
+    owner? || admin?
   end
 
   def edit?
-    owner?
+    owner? || admin?
   end
 
   def destroy?
-    owner?
+    owner? || admin?
   end
 
   def owner?
     user == record.user
+  end
+
+  def admin?
+    user.admin?
   end
 
   class Scope
