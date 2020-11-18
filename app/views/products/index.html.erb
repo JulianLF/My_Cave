@@ -1,0 +1,11 @@
+
+<h1>test</h1>
+
+<% @products.each do |product| %>
+<%= product.name %>
+<% end %>
+
+
+<% if policy(Product).create? %>
+  <%= link_to "New product", user_new_product_path %>
+<% end %>
