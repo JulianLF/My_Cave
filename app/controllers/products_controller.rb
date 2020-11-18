@@ -20,6 +20,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    @product.user = current_user
     authorize @product
     if @product.save
       redirect_to product_path(@product)
@@ -47,7 +48,7 @@ class ProductsController < ApplicationController
   private
 
   def set_product
-    @product = Product.find(params[:id])
+    @product = policy__scope(Product).find(params[:id])
     authorize @product
   end
 
