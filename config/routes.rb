@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users do
-    resources :products, except: %i[index]
-  end
   root to: 'pages#home'
-  resources :products, only: %i[index show]
+  devise_for :users
+  resource :users, only: %[] do
+    resources :products, only: %i[index new]
+  end
+  resources :products, except: [:new] do
+    resource :carts, only: [:create]
+  end
+  resources :carts, only: %i[index destroy]
+  resources :transactions, only: %i[index show create]
 end

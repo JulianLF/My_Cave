@@ -1,25 +1,29 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://unsplash.com/photos/85QELRMFdBM);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('/assets/banner.jpg');">
   <div class="container">
-    <h1>My cave</h1>
+    <h1 id="home-title">My cave</h1>
     <p>Your personal cave straight to your door, sell, buy, drink !</p>
-    <a class="btn btn-flat" href="#">Register now</a>
+    <form class="form-inline md-form mr-auto mb-4">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button type="button" class="btn btn-outline-elegant btn-rounded waves-effect">🔍</button>
+    </form>
   </div>
 </div>
+
 <div class="container">
   <div class="cards">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dykscnyvu/image/upload/v1605605655/thanh-serious-xtxeXKdwgI0-unsplash_hwmbjx.jpg)">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'biere.jpg' %>);">
       Beers
     </div>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dykscnyvu/image/upload/v1605605746/roberta-sorge-IywM7AQTZcM-unsplash_mzgd8n.jpg)">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'wine.jpg' %>)">
       Wine
     </div>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dykscnyvu/image/upload/v1605605655/tristan-gassert-IRzq8sDxb7w-unsplash_cuhbxm.jpg)">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'champagne.jpg' %>)">
       Champagne
     </div>
 
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dykscnyvu/image/upload/v1605605655/c-d-x-q7LiHvJP4os-unsplash_fy4wbt.jpg)">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'liquors.jpg' %>)">
       Liquors
     </div>
   </div>
