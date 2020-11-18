@@ -6,6 +6,7 @@
   width: 100%;
 }
 
+
 .navbar-for-home .navbar-collapse {
   flex-grow: 0;
 }
@@ -20,6 +21,7 @@
 
 .nav-link {
   display: inline;
+  color: white;
 }
 
 .navbar-common {
@@ -34,4 +36,8 @@
 
 .navbar-common .navbar-brand img {
   width: 100px;
+}
+
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+  color: white;
 }
