@@ -1,6 +1,7 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="#">
-    <img src="https://res.cloudinary.com/dykscnyvu/image/upload/v1605627927/archivetemplogo_transparent_rb7sus.png" alt="My Cave Logo">
+<%# <div class="navbar navbar-expand-sm navbar-light navbar-lewagon"> %>
+<div class="navbar navbar-expand-sm navbar-light <%= action_name == "home" ? "navbar-for-home" : "navbar-common" %>" >
+  <a class="navbar-brand" href="/">
+    <%= action_name == "home" ? <img src="<%= asset_path 'logotransparent.png' %>" alt="My Cave Logo"> : <img src="<%= asset_path 'logotransparentblanc.png' %>" alt="My Cave Logo"> %>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

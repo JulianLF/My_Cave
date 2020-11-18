@@ -1,4 +1,4 @@
-.navbar-lewagon {
+.navbar-for-home {
   justify-content: space-between;
   position: relative;
   background: transparent;
@@ -6,11 +6,11 @@
   width: 100%;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-for-home .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-for-home .navbar-brand img {
   width: 100px;
 }
 
@@ -20,4 +20,18 @@
 
 .nav-link {
   display: inline;
+}
+
+.navbar-common {
+  justify-content: space-between;
+  position: relative;
+  background: #20000c;
+  width: 100%;
+}
+.navbar-common .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-common .navbar-brand img {
+  width: 100px;
 }
