@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
   devise_for :users
-  resources :users, only: [] do
+  resource :users, only: [] do
     resources :products, only: [:new]
     get "/shop", to: "products#shop"
   end
