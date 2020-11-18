@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <a class="navbar-brand" href="#">
-    <img src="https://res.cloudinary.com/dykscnyvu/image/upload/v1605612082/logo_200_200_o7oged.png" alt="My Cave Logo">
+    <img src="https://res.cloudinary.com/dykscnyvu/image/upload/v1605627927/archivetemplogo_transparent_rb7sus.png" alt="My Cave Logo">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -24,10 +24,97 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <%= link_to "Register", new_user_registration_path, class: "nav-link" %>
+          <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#registerModal">
+            Register
+          </button>
+          <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#loginModal">
+            Login
+          </button>
         </li>
       <% end %>
     </ul>
+  </div>
+</div>
+
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #3D0016; color: white">
+        <h5 class="modal-title" id="registerModalLabel">Registration</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <%= simple_form_for(User.new, as: :user, url: registration_path(:user)) do |f| %>
+          <%= f.error_notification %>
+          <div class="form-inputs">
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" }%>
+            <%= f.input :username,
+                        required: true,
+                        input_html: { autocomplete: "username" }%>
+            <%= f.input :first_name,
+                        required: true,
+                        input_html: { autocomplete: "first_name" }%>
+            <%= f.input :last_name,
+                        required: true,
+                        input_html: { autocomplete: "last_name" }%>
+            <%= f.input :password,
+                        required: true,
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                        input_html: { autocomplete: "new-password" } %>
+            <%= f.input :password_confirmation,
+                        required: true,
+                        input_html: { autocomplete: "new-password" } %>
+          </div>
+      </div>
+
+          <div class="modal-footer" style="background-color: #3D0016; color: white">
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost-revert" data-dismiss="modal">Close</button>
+              <%= f.button :submit, "Sign up", class: "btn btn-ghost" %>
+            </div>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #3D0016; color: white">
+        <h5 class="modal-title" id="loginModalLabel">Registration</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <%= simple_form_for(User.new, as: :user, url: session_path(:user)) do |f| %>
+            <div class="form-inputs">
+            <%= f.input :email,
+                        required: false,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" } %>
+            <%= f.input :password,
+                        required: false,
+                        input_html: { autocomplete: "current-password" } %>
+            <%= f.input :remember_me, as: :boolean %>
+          </div>
+      </div>
+
+          <div class="modal-footer" style="background-color: #3D0016; color: white">
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost-revert" data-dismiss="modal">Close</button>
+              <%= f.button :submit, "Login", class: "btn btn-ghost" %>
+            </div>
+          </div>
+        <% end %>
+    </div>
   </div>
 </div>

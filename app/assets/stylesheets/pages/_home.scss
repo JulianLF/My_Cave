@@ -4,6 +4,21 @@
   margin-bottom: 7px;
 }
 
+.form-actions {
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+}
+
 body {
   background-color: #ffeaf2;
+  font-family: 'Playfair Display', serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+#home-title {
+  font-size: 64px;
 }
