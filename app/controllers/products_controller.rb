@@ -42,7 +42,7 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
-    redirect_to_product_path(@product)
+    redirect_to shop_users_path
   end
 
   private
@@ -53,6 +53,6 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:name, :description, :price, :availability, :category_id)
+    params.require(:product).permit(:name, :description, :price, :availability, :category_id, :photo)
   end
 end
