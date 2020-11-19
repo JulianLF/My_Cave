@@ -12,8 +12,12 @@
               <%= product.description.truncate(60, separator: /[\.\,: ]/, omission: ' ...') %>
             </div>
           <div class="card-footer d-flex">
-            <div class="card-product-pricing text-success"><h5 id="prix"><%= product.price %>€</h5></div>
-            <a href="#" class="btn btn-ghost-revert"><i class="fas fa-shopping-cart"></i></a>
+            <div class="card-product-pricing text-success">
+              <h5 id="prix"><%= product.price %>€</h5>
+            </div>
+            <%= link_to product_carts_path(product.id), class:"btn btn-ghost-revert", method: :post do %>
+              <i class="fas fa-shopping-cart"></i>
+            <% end %>
           </div>
         </div>
       </div>
