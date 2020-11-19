@@ -4,13 +4,16 @@
     <h1 id="home-title">My cave</h1>
     <p>Your personal cave straight to your door, sell, buy, drink !</p>
       <%= form_tag products_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find a product"
-        %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
-       <% end %>
+        <div class="d-flex">
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            id: "searchinput",
+            placeholder: "Find a product"
+          %>
+          <%= submit_tag "Search", class: "btn", id: "searchbutton" %>
+        <% end %>
+        </div>
     </div>
  </div>
 

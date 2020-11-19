@@ -8,17 +8,18 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
+        <li class="nav-item d-flex active">
+          <%= link_to "Home", "/", class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Notifications", "#", class: "nav-link" %>
+        <li class="nav-item d-flex active">
+          <%= link_to "Cart", "/carts", class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://res.cloudinary.com/dykscnyvu/image/upload/v1605781227/B9724176933Z.1_20200802161018_000_GHQGE7FJ8.1-0_dfy3jr.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "My products", shop_users_path, class: "dropdown-item" %>
             <%= link_to "Create a product", new_users_product_path, class: "dropdown-item" %>
+            <div class="dropdown-divider"></div>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
