@@ -1,7 +1,11 @@
-<div class="container m-auto my-5 py-5 position-absolute">
-  <h1>test</h1>
+<div class="container size-container">
+  <h1>My products</h1>
   <% @products.each do |product| %>
-    <%= product.name %>
+    <%= link_to product.name, product %>
+    <%= link_to "Modify", edit_product_path(product), class: "text-success"  %>
+    <%= link_to "Delete", product, method: "delete", class: "text-danger", data: {confirm: "Are you sure?"}  %>
   <% end %>
-  <%= link_to "New product", new_users_product_path %>
+<div class="container">
+  <%= link_to "New product", new_users_product_path, class: "btn btn-ghost-revert" %>
+</div>
 </div>

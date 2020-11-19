@@ -18,10 +18,10 @@ puts "Chuck Norris is now an admin"
 puts "----------"
 puts "Creating 4 categories"
 
-beer_category = Category.new(name: "beer")
-wine_category = Category.new(name: "wine")
-liquors_category = Category.new(name: "liquors")
-champagne_category = Category.new(name: "champagne")
+beer_category = Category.new(name: "beer", photo: "https://res.cloudinary.com/dykscnyvu/image/upload/v1605625374/josh-duncan-6Sa26Lsjtok-unsplash_y6qw6l.jpg")
+wine_category = Category.new(name: "wine", photo: "https://res.cloudinary.com/dykscnyvu/image/upload/v1605784215/wolfgang-hasselmann-GPwuH2q9mcs-unsplash_ivvsto.jpg")
+liquors_category = Category.new(name: "liquors", photo: "https://res.cloudinary.com/dykscnyvu/image/upload/v1605784372/liquors_j1ybtn.jpg")
+champagne_category = Category.new(name: "champagne", photo: "https://res.cloudinary.com/dykscnyvu/image/upload/v1605784471/kevin-kelly-PPneSBqfCCU-unsplash_ml7a9p.jpg")
 
 beer_category.save
 wine_category.save
@@ -36,10 +36,18 @@ biere_de_mamie = Product.new(name: "Bière de ma grand mère", description: "Une
 vin_de_noah = Product.new(name: "Vin de Noah", description: "Pour enfiler les chaussures à bascule", price: 12, user_id: 3, category_id: 2)
 champ = Product.new(name: "Le Champ à JC", description: "Pour les soirées avec Manu", price: 1280, user_id: 2, category_id: 4)
 sky = Product.new(name: "Le Sky à JC", description: "Pour les soirées avec Raoult", price: 120, user_id: 2, category_id: 4)
+rhum = Product.new(name: "Planteur maison", description: "Planteur de Guadeloupe", price: 15, user_id: 3, category_id: 4)
+cerise = Product.new(name: "Liqueur de cerise", description: "Liqueur maison à la cerise", price: 8, user_id: 3, category_id: 4)
+rhubarbe = Product.new(name: "Eau de vie de Rhubarbe", description: "Eau de vie Rhubarbe 65°", price: 12, user_id: 1, category_id: 4)
 
 biere_de_mamie.save
 vin_de_noah.save
 champ.save
 sky.save
+rhum.save
+cerise.save
+rhubarbe.save
 
 puts "Products created, ready to go!"
+
+
