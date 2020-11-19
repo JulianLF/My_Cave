@@ -1,18 +1,18 @@
 <div class="container size-container">
-  <div class="cards">
+  <div class="all">
     <% @products.each do |product| %>
       <div class="card-product">
-        <%# <img class="card-img" src="https://res.cloudinary.com/dykscnyvu/image/upload/v1605625374/josh-duncan-6Sa26Lsjtok-unsplash_y6qw6l.jpg" alt="Vans"> %>
-        <div class="card-img">
-          <%= cl_image_tag product.photo.key %>
+        <div class="card-img-top">
+          <%= cl_image_tag product.photo.key, width: 300, height: 300, crop: :thumb %>
         </div>
         <div class="card-body">
           <h5 class="card-title"><%= product.name %></h5>
-          <h6 class="card-subtitle mb-2 text-muted"><%= product.user.username %></h6>
-          <%# <p class="card-text">
-            <%= product.description %>
-          <div class="card-footer">
-            <div class="card-product-pricing text-success"><h5 class="mt-4"><%= product.price %>€</h5></div>
+          <h6 class="card-username mb-2 text-muted"><%= product.user.username %></h6>
+            <div class="card-text">
+              <%= product.description.truncate(60, separator: /[\.\,: ]/, omission: ' ...') %>
+            </div>
+          <div class="card-footer d-flex">
+            <div class="card-product-pricing text-success"><h5 id="prix"><%= product.price %>€</h5></div>
             <a href="#" class="btn btn-ghost-revert"><i class="fas fa-shopping-cart"></i></a>
           </div>
         </div>
