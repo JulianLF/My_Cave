@@ -2,10 +2,14 @@ class ProductsController < ApplicationController
   before_action :set_product, only: %i[show edit destroy update]
 
   def index
-    if params[:query].present?
-      @products = policy_scope(Product).where("name ILIKE ?", "%#{params[:query]}%")
+    if params[:category].present?
+      category = policy_scope(Category).where("name ILIKE :category", category: "%#{params[:category]}%").first
+      @products = policy_scope(Product).where(category_id: category.id).order(created_at: :desc)
+    elsif params[:query].present?
+      products = policy_scope(Product).where("name ILIKE :query", query: "%#{params[:query]}%").order(created_at: :desc)
+      @products = products
     else
-       @products = policy_scope(Product).order(created_at: :desc)
+      @products = policy_scope(Product).all
     end
   end
 

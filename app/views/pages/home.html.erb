@@ -17,23 +17,23 @@
 </div>
 <div class="container">
   <div class="cards">
-    <%= link_to products_path, category: @beer do %>
+    <%= link_to products_path(category: 'beer') do %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'biere.jpg' %>);">
         Beers
       </div>
     <% end %>
-    <%= link_to products_path, category: @wine do %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'wine.jpg' %>)">
+    <%= link_to products_path(category: 'wine') do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'wine.jpg' %>);">
         Wine
       </div>
     <% end %>
-    <%= link_to products_path, category: @champagne do %>
+    <%= link_to products_path(category: 'champagne') do %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'champagne.jpg' %>)">
         Champagne
       </div>
     <% end %>
-    <%= link_to products_path, category: @liquor do %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'liquors.jpg' %>)">
+    <%= link_to products_path(category: 'liquors') do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'liquors.jpg' %>);">
         Liquors
       </div>
     <% end %>
