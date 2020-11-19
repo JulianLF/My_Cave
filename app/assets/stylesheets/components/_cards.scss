@@ -104,3 +104,10 @@
 .card-product .card-body {
   padding: 0.50rem;
 }
+
+.cart-cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin: 3px;
+}

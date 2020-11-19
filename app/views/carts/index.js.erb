@@ -1,0 +1,4 @@
+const popup = document.querySelector('#popup-container')
+popup.innerHTML = "<%= j render 'shared/cart', carts: @carts %>";
+popup.style.backgroundColor = "#0000006b";
+popup.style.display = "flex";
