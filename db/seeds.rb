@@ -36,10 +36,16 @@ biere_de_mamie = Product.new(name: "Bière de ma grand mère", description: "Une
 vin_de_noah = Product.new(name: "Vin de Noah", description: "Pour enfiler les chaussures à bascule", price: 12, user_id: 3, category_id: 2)
 champ = Product.new(name: "Le Champ à JC", description: "Pour les soirées avec Manu", price: 1280, user_id: 2, category_id: 4)
 sky = Product.new(name: "Le Sky à JC", description: "Pour les soirées avec Raoult", price: 120, user_id: 2, category_id: 4)
+rhum = Product.new(name: "Planteur maison", description: "Planteur de Guadeloupe", price: 15, user_id: 3, category_id: 4)
+cerise = Product.new(name: "Liqueur de cerise", description: "Liqueur maison à la cerise", price: 8, user_id: 3, category_id: 4)
+rhubarbe = Product.new(name: "Eau de vie de Rhubarbe", description: "Eau de vie Rhubarbe 65°", price: 12, user_id: 1, category_id: 4)
 
 biere_de_mamie.save
 vin_de_noah.save
 champ.save
 sky.save
+rhum.save
+cerise.save
+rhubarbe.save
 
 puts "Products created, ready to go!"
