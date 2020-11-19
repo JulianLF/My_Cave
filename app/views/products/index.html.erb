@@ -2,7 +2,10 @@
   <div class="cards">
     <% @products.each do |product| %>
       <div class="card-product">
-        <img class="card-img" src="https://res.cloudinary.com/dykscnyvu/image/upload/v1605625374/josh-duncan-6Sa26Lsjtok-unsplash_y6qw6l.jpg" alt="Vans">
+        <%# <img class="card-img" src="https://res.cloudinary.com/dykscnyvu/image/upload/v1605625374/josh-duncan-6Sa26Lsjtok-unsplash_y6qw6l.jpg" alt="Vans"> %>
+        <div class="card-img">
+          <%= cl_image_tag product.photo.key %>
+        </div>
         <div class="card-body">
           <h5 class="card-title"><%= product.name %></h5>
           <h6 class="card-subtitle mb-2 text-muted"><%= product.user.username %></h6>
