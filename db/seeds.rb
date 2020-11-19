@@ -18,10 +18,10 @@ puts "Chuck Norris is now an admin"
 puts "----------"
 puts "Creating 4 categories"
 
-beer_category = Category.new(name: "beer")
-wine_category = Category.new(name: "wine")
-liquors_category = Category.new(name: "liquors")
-champagne_category = Category.new(name: "champagne")
+beer_category = Category.new(name: "beer", photo: "https://res.cloudinary.com/dykscnyvu/image/upload/v1605625374/josh-duncan-6Sa26Lsjtok-unsplash_y6qw6l.jpg")
+wine_category = Category.new(name: "wine", photo: "https://res.cloudinary.com/dykscnyvu/image/upload/v1605784215/wolfgang-hasselmann-GPwuH2q9mcs-unsplash_ivvsto.jpg")
+liquors_category = Category.new(name: "liquors", photo: "https://res.cloudinary.com/dykscnyvu/image/upload/v1605784372/liquors_j1ybtn.jpg")
+champagne_category = Category.new(name: "champagne", photo: "https://res.cloudinary.com/dykscnyvu/image/upload/v1605784471/kevin-kelly-PPneSBqfCCU-unsplash_ml7a9p.jpg")
 
 beer_category.save
 wine_category.save
@@ -49,3 +49,5 @@ cerise.save
 rhubarbe.save
 
 puts "Products created, ready to go!"
+
+

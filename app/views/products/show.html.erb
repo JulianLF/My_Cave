@@ -1,9 +1,12 @@
 
 <div class="container size-container">
+<%= cl_image_tag @product.photo.key, height: 300, width: 400, crop: :fill %>
 <h1>
 <%= @product.name %>
 </h1>
 
 <h3> <%= @product.description %> </h3>
 <h6> <%= @product.price %>€ </h6>
+
+<h6>Vendeur : <%= @product.user.username %> </h6>
 </div>
