@@ -2,7 +2,11 @@ class ProductsController < ApplicationController
   before_action :set_product, only: %i[show edit destroy update]
 
   def index
-    @products = policy_scope(Product).order(created_at: :desc)
+    if params[:query].present?
+      @products = policy_scope(Product).where("name ILIKE ?", "%#{params[:query]}%")
+    else
+       @products = policy_scope(Product).order(created_at: :desc)
+    end
   end
 
   def shop
