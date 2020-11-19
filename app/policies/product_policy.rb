@@ -7,4 +7,8 @@ class ProductPolicy < ApplicationPolicy
   def shop?
     true
   end
+
+  def show?
+    true
+  end
 end

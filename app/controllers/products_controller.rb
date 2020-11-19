@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   end
 
   def shop
-    @products = policy_scope(Product).where(id: :user_id).order(created_at: :desc)
+    @products = policy_scope(Product).where(user_id: current_user.id).order(created_at: :desc)
     authorize @products
   end
 

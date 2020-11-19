@@ -12,3 +12,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.size-container{
+  min-height: 65vh;
+}
+
+a {
+  text-decoration: none;
+}

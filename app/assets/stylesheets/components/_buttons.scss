@@ -19,11 +19,15 @@
   padding: 6px 20px;
   border-radius: 50px;
   font-weight: bold;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
   background-color: white;
 }
 .btn-ghost-revert:hover {
   opacity: 1;
   color: #3D0016;
+}
+
+.btn-danger {
+padding: 3px;
 }
