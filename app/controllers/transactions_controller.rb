@@ -11,8 +11,8 @@ class TransactionsController < ApplicationController
       transaction = Transaction.new(user_id: current_user.id, product_id: cart.product.id)
       authorize transaction
       transaction.save!
+      cart.destroy
     end
-    carts.destroy_all
     redirect_to transactions_path
   end
 end
