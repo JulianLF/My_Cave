@@ -10,7 +10,7 @@ class CartsController < ApplicationController
     cart = Cart.new(user_id: current_user.id, product_id: params[:product_id])
     authorize cart
     cart.save
-    redirect_to carts_path
+    redirect_to products_path
   end
 
   def destroy
