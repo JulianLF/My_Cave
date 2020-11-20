@@ -6,9 +6,9 @@
   <div class="card-product-infos">
    <div>
      <h2><%= transaction.product.name %></h2>
-     <p><%= transaction.product.description %></p>
+     <p><%= transaction.product.description.truncate(30, separator: /[\.\,: ]/, omission: ' ...') %></p>
    </div>
-    <h2><%= transaction.created_at.strftime('%d-%m-%Y') %></h2>
+    <p>date achat: <%= transaction.created_at.strftime('%d-%m-%Y') %></p>
   </div>
  </div>
 <% end %>
