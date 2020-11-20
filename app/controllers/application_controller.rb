@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :set_category_array
   include Pundit
 
   after_action :verify_authorized, except: :index, unless: :skip_pundit?
@@ -18,5 +19,10 @@ class ApplicationController < ActionController::Base
 
   def skip_pundit?
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
+  end
+
+  def set_category_array
+    # @category = Category.pluck(:name)
+    @category = Category.all
   end
 end
