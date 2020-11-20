@@ -1,7 +1,7 @@
 <div class="container size-container">
   <div class="all">
     <% @products.each do |product| %>
-      <div class="card-product">
+      <div class="card-product" data-category="<%= product.category_id %>" >
         <div class="card-img-top">
           <%= cl_image_tag product.photo.key, class:"img-card", width: 300, height: 300 %>
         </div>
