@@ -1,7 +1,1 @@
-<% @carts.each do |item| %>
-  <p><%= item.product.name %></p>
-  <%= link_to 'cancel', cart_path(item), method: :delete %>
-<% end %>
-<% unless @carts.empty? %>
-  <%= link_to  "VALID CART", transactions_path, method: :post %>
-<% end %>
+<%= render 'shared/cart', carts: @carts %>
