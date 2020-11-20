@@ -25,13 +25,10 @@
           <li class="nav-item d-flex active">
             <%= link_to "Home", "/", class: "nav-link" %>
           </li>
-          <li class="nav-item d-flex active" style="opacity:0.9;">
-            <%= link_to carts_path, class: "nav-link" do %> <!--, remote: true -->
+          <li class="nav-item d-flex active">
+            <%= link_to "/carts", class: "nav-link" do %>
               <i class="fas fa-shopping-cart"></i>
             <% end %>
-          </li>
-          <li class="nav-item d-flex active">
-            <%= link_to "Cart", "/carts", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://res.cloudinary.com/dykscnyvu/image/upload/v1605781227/B9724176933Z.1_20200802161018_000_GHQGE7FJ8.1-0_dfy3jr.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -133,4 +130,3 @@
     </div>
   </div>
 </div>
-<div id="popup-container"></div>
