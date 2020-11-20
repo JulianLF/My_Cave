@@ -214,13 +214,14 @@
   width: 100%;
   h2{
   font-size:25px;
-  }
+}
 }
 .cart-cards{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1px;
   margin: 3px;
+  box-shadow: 1px 1px 2px 0px black;
 }
 
 .card-list {
