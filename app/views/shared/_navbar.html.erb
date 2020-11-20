@@ -8,8 +8,8 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <% if action_name != 'home' %>
-          <%= collection_select(:category, :filter, @category, :name) %>
           <li class="nav-item d-flex active">
+            <%= collection_select(:category, :filter, @category, :id, :name, {include_blank: 'All products'}) %>
             <%= form_tag products_path, method: :get do %>
               <div class="d-flex">
                 <%= text_field_tag :query,
