@@ -4,7 +4,7 @@ class Product < ApplicationRecord
   has_one_attached :photo
   belongs_to :category
   belongs_to :user
-  has_many :transactions
+  has_many :transactions, dependent: :destroy
   has_many :carts
   after_save :default_image
   pg_search_scope :global_search,
