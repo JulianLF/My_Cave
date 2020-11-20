@@ -22,10 +22,11 @@
   opacity: 0.8;
   transition: opacity 0.5s ease;
   background-color: white;
+  text-decoration: none;
 }
 .btn-ghost-revert:hover {
   opacity: 1;
-  color: #3D0016;
+  color: white;
 }
 
 .btn-danger {
