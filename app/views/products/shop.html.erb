@@ -1,11 +1,22 @@
 <div class="container size-container">
   <h1>My products</h1>
   <% @products.each do |product| %>
-    <%= link_to product.name, product %>
-    <%= link_to "Modify", edit_product_path(product), class: "text-success"  %>
-    <%= link_to "Delete", product, method: "delete", class: "text-danger", data: {confirm: "Are you sure?"}  %>
+    <%= link_to product do %>
+      <div class="card-list">
+        <%= cl_image_tag product.photo.key %>
+        <div class="card-list-infos">
+          <h4><%= product.name %></h4>
+          <div class="d-flex">
+          <h2><%= link_to "Modify", edit_product_path(product), class: "text-success"  %></h2>
+          <h2><%= link_to "Delete", product, method: "delete", class: "text-danger", data: {confirm: "Are you sure?"}  %></h2>
+          </div>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 <div class="container">
   <%= link_to "New product", new_users_product_path, class: "btn btn-ghost-revert" %>
 </div>
 </div>
+
+

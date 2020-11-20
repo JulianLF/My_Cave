@@ -11,8 +11,8 @@
     <% carts.each do |item| %>
     <% total += item.product.price %>
     <% end %>
-    <h5>Total :<%= total %>€</h5>
   <% unless carts.empty? %>
+    <h5>Total :<%= total %>€</h5>
     <%= link_to  "VALID CART & PAY", transactions_path, method: :post, class: "btn btn-ghost-revert" %>
   <% end %>
 </div>
