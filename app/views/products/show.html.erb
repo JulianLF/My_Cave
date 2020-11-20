@@ -9,4 +9,8 @@
 <h6> <%= @product.price %>€ </h6>
 
 <h6>Vendeur : <%= @product.user.username %> </h6>
+<%= link_to product_carts_path(@product.id), class:"btn btn-ghost-revert m-1", method: :post do %>
+  Add this product to cart <i class="fas fa-shopping-cart"></i>
+<% end %>
+<%= link_to 'Back', :back, class: "btn btn-ghost-revert" %>
 </div>
