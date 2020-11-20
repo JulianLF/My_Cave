@@ -94,6 +94,10 @@
 
 // cards products
 
+.all {
+  justify-items: center;
+}
+
 .card-product {
   font-size: 1em;
   overflow: hidden;
@@ -103,6 +107,7 @@
   box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
   width: 300px;
   background-color: white;
+  display: grid;
 }
 
 .card-img-top {
@@ -125,11 +130,13 @@
   font-size: 20px;
   font-weight: 700;
   line-height: 1.2857em;
+  margin-bottom: 5px;
 }
 
 .card-username {
   font-size: 13px;
   color: rgba(0, 0, 0, .4);
+  margin-bottom: 0.75rem;
 }
 
 .card-username a {
@@ -161,9 +168,17 @@
   background-color: none;
 }
 
+.btn-ghost-revert:hover {
+  background-color: #20000c;
+  .fas {
+    color: white;
+  }
+}
+
 #prix {
   margin-bottom: 0;
   padding-bottom: 0;
+  color: #a51573;
 }
 
 #img-transaction {
@@ -171,9 +186,16 @@
   // width: 300px;
   background-size: cover;
   background-position: center;
-
 }
+
+.img-card {
+  object-fit: contain;
+}
+
+
+
 //cards transactions
+
 .cards-product-transaction {
   overflow: hidden;
   height: 120px;
@@ -181,6 +203,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  max-width: 600px;
 }
 
 .cards-product-transaction img {
@@ -215,14 +238,10 @@
     h2 {
     font-size:25px;
     }
-}
-
-.cart-cards{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 1px;
-  margin: 3px;
-  box-shadow: 1px 1px 2px 0px black;
+    p {
+      font-size: 18px;
+      text-decoration: none;
+    }
 }
 
 .card-list {
@@ -255,8 +274,4 @@
 
 .card-list a {
   text-decoration: none;
-}
-
-.img-card {
-  object-fit: contain;
 }

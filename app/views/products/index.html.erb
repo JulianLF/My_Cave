@@ -8,17 +8,17 @@
         <div class="card-body">
           <h5 class="card-title"><%= product.name %></h5>
           <h6 class="card-username mb-2 text-muted"><%= product.user.username %></h6>
-            <div class="card-text">
-              <%= product.description.truncate(60, separator: /[\.\,: ]/, omission: ' ...') %>
-            </div>
-          <div class="card-footer d-flex">
-            <div class="card-product-pricing text-success">
-              <h5 id="prix"><%= product.price %>€</h5>
-            </div>
-            <%= link_to product_carts_path(product.id), class:"btn btn-ghost-revert", method: :post do %>
-              <i class="fas fa-shopping-cart"></i>
-            <% end %>
+          <div class="card-text">
+            <%= product.description.truncate(60, separator: /[\.\,: ]/, omission: ' ...') %>
           </div>
+        </div>
+        <div class="card-footer d-flex">
+          <div class="card-product-pricing text-success">
+            <h5 id="prix"><%= product.price %>€</h5>
+          </div>
+          <%= link_to product_carts_path(product.id), class:"btn btn-ghost-revert", method: :post do %>
+            <i class="fas fa-shopping-cart"></i>
+          <% end %>
         </div>
       </div>
     <% end %>

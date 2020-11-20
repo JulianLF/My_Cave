@@ -1,18 +1,18 @@
 <div class="container size-container">
   <div class = "container-flex">
-   <% @transactions.each do |transaction| %>
-  <div class="cards-product-transaction m-3">
-  <%= cl_image_tag transaction.product.photo.key %>
-  <div class="card-product-infos">
-   <div>
-     <h2><%= transaction.product.name %></h2>
-     <p><%= transaction.product.description %></p>
-   </div>
-    <h2><%= transaction.created_at.strftime('%d-%m-%Y') %></h2>
+    <% @transactions.each do |transaction| %>
+      <div class="cards-product-transaction m-3">
+        <%= cl_image_tag transaction.product.photo.key %>
+        <div class="card-product-infos">
+          <div>
+            <h2><%= transaction.product.name %></h2>
+            <p><%= transaction.product.description %></p>
+          </div>
+          <h2><strong><%= transaction.product.price %> €</strong></h2>
+        </div>
+      </div>
+    <% end %>
   </div>
- </div>
-<% end %>
-</div>
 </div>
 
 
