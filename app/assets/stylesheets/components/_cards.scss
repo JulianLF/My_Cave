@@ -241,7 +241,42 @@
 
 .cart-cards{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1px;
   margin: 3px;
+  box-shadow: 1px 1px 2px 0px black;
+}
+
+.card-list {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  max-width: 350px;
+  margin: 4px;
+}
+
+.card-list img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-list h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+.card-list .card-list-infos {
+  padding: 16px;
+}
+
+.card-list a {
+  text-decoration: none;
+}
+=======
 }
