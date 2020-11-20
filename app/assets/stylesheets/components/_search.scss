@@ -16,9 +16,14 @@
   height: 45px;
 }
 
+#searchbutton:hover {
+  background-color: #20000c;
+}
+
 #searchinput {
   border-radius: 50px 0 0 50px;
   height: 45px;
   padding: 20px;
   width: 235px;
+  border-color: white;
 }
