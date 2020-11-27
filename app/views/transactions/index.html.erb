@@ -1,22 +1,17 @@
 <div class="container size-container">
   <div class = "container">
-   <% @transactions.each do |transaction| %>
-  <div class="cards-product-transaction m-3">
-  <%= cl_image_tag transaction.product.photo.key %>
-  <div class="card-product-infos">
-   <div>
-     <h2><%= transaction.product.name %></h2>
-     <p><%= transaction.product.description.truncate(40, separator: /[\.\,: ]/, omission: ' ...') %></p>
-   </div>
-    <p>date d'achat: <%= transaction.created_at.strftime('%d-%m-%Y') %></p>
+    <% @transactions.each do |transaction| %>
+      <div class="cards-product-transaction m-3">
+        <%= cl_image_tag transaction.product.photo.key %>
+        <div class="card-product-infos">
+          <div>
+            <h2><%= transaction.product.name %></h2>
+            <p><%= transaction.product.description.truncate(40, separator: /[\.\,: ]/, omission: ' ...') %></p>
+          </div>
+          <p>date d'achat: <%= transaction.created_at.strftime('%d-%m-%Y') %></p>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
-<% end %>
-</div>
-
-
-
-
-
-
 

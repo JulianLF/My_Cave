@@ -131,6 +131,12 @@
   font-weight: 700;
   line-height: 1.2857em;
   margin-bottom: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+.card-body a:hover {
+  text-decoration: none;
 }
 
 .card-username {
